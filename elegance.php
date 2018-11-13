@@ -5,13 +5,13 @@
  * Date: 2018/11/11
  * Time: 16:51
  */
-function countgracepoint($n)
+function countgracepoint($n*$n)
 {
     $count = 0;
-    for ($y = 1; $y * $y < $n; $y++) {
+    for ($y = 1; $y * $y < $n*$n; $y++) {
 
-        $x = (int)sqrt($n - $y * $y);
-        if ($y * $y + $x * $x == $n) {
+        $x = (int)sqrt($n*$n - $y * $y);
+        if ($y * $y + $x * $x == $n*$n) {
 
             $count++;
 
@@ -19,8 +19,8 @@ function countgracepoint($n)
 
     }
     $count *= 4;
-     $y = (int)sqrt($n);
-    if ($y * $y == $n) $count += 4;
+     $y = (int)sqrt($n*$n);
+    if ($y * $y == $n*$n) $count += 4;
     return $count;
 
 
